@@ -32,7 +32,7 @@ python train_net.py --cfg_file configs/scannet/0050.yaml gpus 0, exp_name scanne
 ### Mesh Extraction
 
 ```shell
-python run.py --type evaluate --cfg_file configs/scannet/0050.yaml gpus 0, exp_name scannet_0050
+python run.py --type mesh_extract --output_mesh result.obj --cfg_file configs/scannet/0050.yaml gpus 0, exp_name scannet_0050
 ```
 
 ### Evaluation
