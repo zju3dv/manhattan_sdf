@@ -1,0 +1,93 @@
+task: manhattan_sdf
+exp_name: 'scannet_0050'
+gpus: [0]
+
+train_dataset_module: lib.datasets.scannet
+test_dataset_module: lib.datasets.scannet
+network_module: lib.networks.network
+trainer_module: lib.train.trainers.manhattan_sdf
+evaluator_module: lib.evaluators.mesh
+
+model:
+    net_width: 256
+    feature_width: 256
+    bounding_radius: 2.0
+    sdf:
+        geometric_init: True
+        radius_init: 1.0
+        net_depth: 8
+        skips: [4]
+        fr_pos: 6
+        weight_norm: True
+    radiance:
+        net_depth: 4
+        skips: []
+        fr_pos: -1
+        fr_view: -1
+        weight_norm: True
+    semantic:
+        net_depth: 4
+        skips: []
+        fr_pos: -1
+        fr_view: -1
+        weight_norm: True
+    beta_init: 0.1
+    speed_factor: 10.0
+
+train_dataset:
+    data_root: 'data/scannet'
+    split: 'train'
+    scene: '0050_00'
+    near: 0.0
+    far: 2.0
+
+test_dataset:
+    data_root: 'data/scannet'
+    split: 'test'
+    scene: '0050_00'
+    near: 0.0
+    far: 2.0
+    scale: 0.40543
+    offset: [4.24910, 2.30138, 1.15986]
+
+sample:
+    N_samples: 128
+    N_importance: 64
+    rayschunk: 65536
+    netchunk: 1048576
+    max_upsample_steps: 5
+    max_bisection_steps: 10
+    epsilon: 0.1
+  
+train:
+    N_rays: 1024
+    batch_size: 1
+    lr: 0.0005
+    weight_decay: 0.
+    epoch: 50
+    scheduler:
+        type: 'exponential'
+        gamma: 0.1
+        decay_epochs: 50
+    num_workers: 0
+
+loss:
+    rgb_weight: 1.0
+    depth_weight: 1.0
+    depth_weight_decay: 0.5
+    depth_weight_decay_epochs: [5, ]
+    depth_loss_clamp: 0.5
+    depth_loss_clamp_epoch: 1
+    joint_start: 1
+    joint_weight: 0.1
+    ce_weight: 1.0
+    ce_weight_decay: 0.5
+    ce_weight_decay_epochs: [1, 5]
+    non_plane_weight: 0.1
+    eikonal_weight: 0.1
+
+ep_iter: 1000
+save_ep: 1
+eval_ep: 1
+save_latest_ep: 1
+log_interval: 1
