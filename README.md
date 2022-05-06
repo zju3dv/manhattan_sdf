@@ -1,5 +1,5 @@
 # Neural 3D Scene Reconstruction with the Manhattan-world Assumption
-### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video]() | [Paper](https://arxiv.org/abs/xxx)
+### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=oEE7mK0YQtc) | [Paper](https://arxiv.org/abs/xxx)
 <br/>
 
 ![introduction](./assets/introduction.png)
