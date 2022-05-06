@@ -1,10 +1,10 @@
 # Neural 3D Scene Reconstruction with the Manhattan-world Assumption
-### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=oEE7mK0YQtc) | [Paper](https://arxiv.org/abs/xxx)
+### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=oEE7mK0YQtc) | [Paper](https://arxiv.org/abs/2205.02836)
 <br/>
 
 ![introduction](./assets/introduction.png)
 
-> [Neural 3D Scene Reconstruction with the Manhattan-world Assumption](https://arxiv.org/abs/xxx)  
+> [Neural 3D Scene Reconstruction with the Manhattan-world Assumption](https://arxiv.org/abs/2205.02836)  
 > [Haoyu Guo](https://github.com/ghy0324)<sup>\*</sup>, [Sida Peng](https://pengsida.net)<sup>\*</sup>, [Haotong Lin](https://github.com/haotongl), [Qianqian Wang](http://www.cs.cornell.edu/~qqw/), [Guofeng Zhang](http://www.cad.zju.edu.cn/home/gfzhang/), [Hujun Bao](http://www.cad.zju.edu.cn/home/bao/), [Xiaowei Zhou](https://xzhou.me)  
 > CVPR 2022 (Oral Presentation)
 <br/>
