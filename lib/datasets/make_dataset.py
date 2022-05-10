@@ -1,5 +1,4 @@
 from . import samplers
-from .dataset_catalog import DatasetCatalog
 import torch
 import torch.utils.data
 import imp
