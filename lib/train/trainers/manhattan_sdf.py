@@ -109,12 +109,6 @@ class NetworkWrapper(nn.Module):
         scalar_stats.update({'loss': loss})
         scalar_stats['beta'] = output['scalars']['beta']
         scalar_stats['theta'] = self.net.theta.data
-        
-        for k, v in loss_weights.items():
-            if not isinstance(v, float):
-                continue
-            else:
-                scalar_stats[f'{k}_weight'] = torch.tensor([v])
 
         image_stats = {}
 
