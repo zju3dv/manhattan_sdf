@@ -55,7 +55,7 @@ sample:
     N_importance: 64
     rayschunk: 65536
     netchunk: 1048576
-    max_upsample_steps: 5
+    max_upsample_steps: 6
     max_bisection_steps: 10
     epsilon: 0.1
   
@@ -79,7 +79,7 @@ loss:
     depth_loss_clamp: 0.5
     depth_loss_clamp_epoch: 1
     joint_start: 1
-    joint_weight: 0.1
+    joint_weight: 0.05
     ce_weight: 1.0
     ce_weight_decay: 0.5
     ce_weight_decay_epochs: [1, 5]

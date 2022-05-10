@@ -87,7 +87,7 @@ def transform(mesh, scale, offset):
 
 
 def extract_mesh(sdf_net, level=0.0, N=512, chunk=500000):
-    s = cfg.model.bounding_radius
+    s = cfg.model.bounding_radius * 2
     voxel_grid_origin = [-s/2., -s/2., -s/2.]
     volume_size = [s, s, s]
 

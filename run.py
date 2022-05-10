@@ -23,7 +23,7 @@ def run_mesh_extract():
     mesh = transform(mesh, cfg.test_dataset.scale, cfg.test_dataset.offset)
 
     assert args.output_mesh != ''
-    o3d.io.write_triangle_mesh(args.output_mesh)
+    o3d.io.write_triangle_mesh(args.output_mesh, mesh)
 
 
 def print_result(result_dict):
@@ -55,7 +55,7 @@ def run_evaluate():
     mesh = transform(mesh, cfg.test_dataset.scale, cfg.test_dataset.offset)
 
     if args.output_mesh != '':
-        o3d.io.write_triangle_mesh(args.output_mesh)
+        o3d.io.write_triangle_mesh(args.output_mesh, mesh)
 
     mesh_gt = o3d.io.read_triangle_mesh(f'{cfg.test_dataset.data_root}/{cfg.test_dataset.scene}/gt.obj')
     evaluate_result = evaluator.evaluate(mesh, mesh_gt)
