@@ -1,5 +1,5 @@
 task: manhattan_sdf
-exp_name: 'scannet_0050'
+exp_name: 'scannet_0084'
 gpus: [0]
 
 train_dataset_module: lib.datasets.scannet
@@ -37,18 +37,18 @@ model:
 train_dataset:
     data_root: 'data/scannet'
     split: 'train'
-    scene: '0050_00'
+    scene: '0084_00'
     near: 0.0
     far: 2.0
 
 test_dataset:
     data_root: 'data/scannet'
     split: 'test'
-    scene: '0050_00'
+    scene: '0084_00'
     near: 0.0
     far: 2.0
-    scale: 0.40543
-    offset: [4.24910, 2.30138, 1.15986]
+    scale: 0.44963
+    offset: [1.23815, 2.57319, 1.38001]
 
 sample:
     N_samples: 128
@@ -83,7 +83,7 @@ loss:
     ce_weight: 1.0
     ce_weight_decay: 0.5
     ce_weight_decay_epochs: [1, 5]
-    non_plane_weight: 0.2
+    non_plane_weight: 1.0
     eikonal_weight: 0.1
 
 ep_iter: 1000

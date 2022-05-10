@@ -1,3 +1,7 @@
+**News**
+
+* `05/10/2022` We upload our processed ScanNet scene data to [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC).
+
 # Neural 3D Scene Reconstruction with the Manhattan-world Assumption
 ### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video]() | [Paper](https://arxiv.org/abs/xxx)
 <br/>
@@ -19,7 +23,9 @@ conda activate manhattan
 
 ### Data preparation
 
-Coming soon!
+Download ScanNet scene data evaluated in the paper from [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC) and extract them into `data/`, make sure the path is consistent with [config file](./configs/0050.yaml#L38).
+
+Instruction to run on custom data is coming soon!
 
 ## Usage
 
@@ -29,7 +35,7 @@ Coming soon!
 python train_net.py --cfg_file configs/scannet/0050.yaml gpus 0, exp_name scannet_0050
 ```
 
-### Mesh Extraction
+### Mesh extraction
 
 ```shell
 python run.py --type mesh_extract --output_mesh result.obj --cfg_file configs/scannet/0050.yaml gpus 0, exp_name scannet_0050
