@@ -27,7 +27,7 @@ dependencies:
     - pyopengl==3.1.0
     - pyrender==0.1.45
     - pyyaml==5.4.1
-    - scikit-image==0.18.3
+    - scikit-image==0.19.2
     - scikit-learn==1.0
     - scipy==1.7.1
     - tensorboard==2.6.0
