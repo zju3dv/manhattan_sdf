@@ -23,10 +23,6 @@ class NetworkWrapper(nn.Module):
         scalar_stats.update({'rgb_loss': rgb_loss})
         loss += loss_weights['rgb'] * rgb_loss
 
-        mse = F.mse_loss(batch['rgb'], output['rgb'].detach(), reduction='mean')
-        psnr = -10. * torch.log(mse) / torch.log(torch.Tensor([10.]).to(mse.device))
-        scalar_stats.update({'psnr': psnr})
-
         depth_colmap_mask = batch['depth_colmap'] > 0
         if depth_colmap_mask.sum() > 0:
             depth_loss = F.l1_loss(output['depth'][depth_colmap_mask], batch['depth_colmap'][depth_colmap_mask], reduction='none')
@@ -58,7 +54,7 @@ class NetworkWrapper(nn.Module):
             if wall_mask.sum() > 0:
                 wall_normals = surface_normals_normalized[wall_mask]
                 wall_loss_vertical = wall_normals[..., 2].abs()
-                theta = self.net.theta  # mapping theta to (-pi, pi)
+                theta = self.net.theta
                 cos = wall_normals[..., 0] * torch.cos(theta) + wall_normals[..., 1] * torch.sin(theta)
                 wall_loss_horizontal = torch.min(cos.abs(), torch.min((1 - cos).abs(), (1 + cos).abs()))
                 wall_loss = wall_loss_vertical + wall_loss_horizontal
