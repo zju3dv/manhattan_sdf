@@ -123,7 +123,7 @@ class Trainer(object):
     def val(self, epoch, save_mesh=True, evaluate_mesh=False, data_loader=None, evaluator=None, recorder=None):
         self.network.eval()
         torch.cuda.empty_cache()
-        mesh = extract_mesh(self.network.net.model.sdf_net, self.network.net.model.semantic_net)
+        mesh = extract_mesh(self.network.net.model.sdf_net)
         if save_mesh and not evaluate_mesh:
             os.makedirs(f'{cfg.result_dir}/', exist_ok=True)
             mesh.export(f'{cfg.result_dir}/{epoch}.obj')
