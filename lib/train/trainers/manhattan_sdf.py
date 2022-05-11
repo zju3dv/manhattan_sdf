@@ -19,13 +19,13 @@ class NetworkWrapper(nn.Module):
         loss = 0
         scalar_stats = {}
 
-        rgb_loss = F.l1_loss(batch['rgb'], output['rgb'], reduction='none').mean()
+        rgb_loss = F.l1_loss(batch['rgb'], output['rgb'], reduction='none').mean() # Eq.5
         scalar_stats.update({'rgb_loss': rgb_loss})
         loss += loss_weights['rgb'] * rgb_loss
 
         depth_colmap_mask = batch['depth_colmap'] > 0
         if depth_colmap_mask.sum() > 0:
-            depth_loss = F.l1_loss(output['depth'][depth_colmap_mask], batch['depth_colmap'][depth_colmap_mask], reduction='none')
+            depth_loss = F.l1_loss(output['depth'][depth_colmap_mask], batch['depth_colmap'][depth_colmap_mask], reduction='none') # Eq.7
             if 'depth_loss_clamp' in loss_weights:
                 depth_loss = depth_loss.clamp(max=loss_weights['depth_loss_clamp'])
             depth_loss = depth_loss.mean()
@@ -47,8 +47,8 @@ class NetworkWrapper(nn.Module):
 
             if floor_mask.sum() > 0:
                 floor_normals = surface_normals_normalized[floor_mask]
-                floor_loss = (1 - floor_normals[..., 2])
-                joint_floor_loss = (floor_score[floor_mask][..., 0] * floor_loss).mean()
+                floor_loss = (1 - floor_normals[..., 2]) # Eq.8
+                joint_floor_loss = (floor_score[floor_mask][..., 0] * floor_loss).mean() # Eq.13
                 joint_loss += joint_floor_loss
             
             if wall_mask.sum() > 0:
@@ -56,16 +56,16 @@ class NetworkWrapper(nn.Module):
                 wall_loss_vertical = wall_normals[..., 2].abs()
                 theta = self.net.theta
                 cos = wall_normals[..., 0] * torch.cos(theta) + wall_normals[..., 1] * torch.sin(theta)
-                wall_loss_horizontal = torch.min(cos.abs(), torch.min((1 - cos).abs(), (1 + cos).abs()))
+                wall_loss_horizontal = torch.min(cos.abs(), torch.min((1 - cos).abs(), (1 + cos).abs())) # Eq.9
                 wall_loss = wall_loss_vertical + wall_loss_horizontal
-                joint_wall_loss = (wall_score[wall_mask][..., 0] * wall_loss).mean()
+                joint_wall_loss = (wall_score[wall_mask][..., 0] * wall_loss).mean() # Eq.13
                 joint_loss += joint_wall_loss
             
             if floor_mask.sum() > 0 or wall_mask.sum() > 0:
                 scalar_stats.update({'joint_loss': joint_loss})
                 loss += loss_weights['joint'] * joint_loss
             
-        else:
+        else: # Semantic score is unreliable in early training stage
             geo_loss = 0.
 
             if floor_mask.sum() > 0:
@@ -86,7 +86,7 @@ class NetworkWrapper(nn.Module):
             semantic_score_log.reshape(-1, 3),
             semantic_deeplab.reshape(-1).long(),
             weight=loss_weights['ce_cls']
-        )
+        ) # Eq.14
         scalar_stats.update({'cross_entropy_loss': cross_entropy_loss})
         loss += loss_weights['ce'] * cross_entropy_loss
 
@@ -98,7 +98,7 @@ class NetworkWrapper(nn.Module):
         _, nablas_eik, _ = self.net.model.sdf_net.forward_with_nablas(eikonal_points)
         nablas = torch.cat([nablas, nablas_eik], dim=-2)
         nablas_norm = torch.norm(nablas, dim=-1)
-        eikonal_loss = F.mse_loss(nablas_norm, nablas_norm.new_ones(nablas_norm.shape), reduction='mean')
+        eikonal_loss = F.mse_loss(nablas_norm, nablas_norm.new_ones(nablas_norm.shape), reduction='mean') # Eq.6
         scalar_stats.update({'eikonal_loss': eikonal_loss})
         loss += loss_weights['eikonal'] * eikonal_loss
 
