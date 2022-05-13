@@ -54,7 +54,7 @@ python run.py --type evaluate --cfg_file configs/scannet/0050.yaml gpus 0, exp_n
 
 If you find this code useful for your research, please use the following BibTeX entry.
 
-```
+```bibtex
 @inproceedings{guo2022manhattan,
   title={Neural 3D Scene Reconstruction with the Manhattan-world Assumption},
   author={Guo, Haoyu and Peng, Sida and Lin, Haotong and Wang, Qianqian and Zhang, Guofeng and Bao, Hujun and Zhou, Xiaowei},
