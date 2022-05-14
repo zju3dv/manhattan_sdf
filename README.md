@@ -63,4 +63,7 @@ If you find this code useful for your research, please use the following BibTeX 
 }
 ```
 
-<!-- ## Acknowledgement -->
+## Acknowledgement
+
+- Thanks to Lior Yariv for her excellent work [VolSDF](https://lioryariv.github.io/volsdf/).
+- Thanks to Jianfei Guo for his implementation of VolSDF [neurecon](https://github.com/ventusff/neurecon).
