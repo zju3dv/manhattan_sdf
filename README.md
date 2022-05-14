@@ -25,7 +25,7 @@ conda activate manhattan
 
 ### Data preparation
 
-Download ScanNet scene data evaluated in the paper from [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC) and extract them into `data/`, make sure the path is consistent with [config file](./configs/0050.yaml#L38).
+Download ScanNet scene data evaluated in the paper from [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC) / [Google Drive](https://drive.google.com/drive/folders/1VwnlvYe5ab-hz0AK2ugxWz3RiMFNA7Ot?usp=sharing) / [BaiduNetDisk (password:ap9k)](https://pan.baidu.com/s/1P5LWMvPzOLKiwEcMAjaDIw) and extract them into `data/`, make sure the path is consistent with [config file](./configs/0050.yaml#L38).
 
 Instruction to run on custom data is coming soon!
 
