@@ -67,3 +67,5 @@ If you find this code useful for your research, please use the following BibTeX 
 
 - Thanks to Lior Yariv for her excellent work [VolSDF](https://lioryariv.github.io/volsdf/).
 - Thanks to Jianfei Guo for his implementation of VolSDF [neurecon](https://github.com/ventusff/neurecon).
+- Thanks to Johannes Schönberger for his excellent work [COLMAP](https://github.com/colmap/colmap).
+- Thanks to Shaohui Liu for his customized implementation of [COLMAP](https://github.com/B1ueber2y/colmap/tree/c84269d693246d8294307cc32f851813f18b6a2d).
