@@ -6,7 +6,7 @@
 * `05/10/2022` We upload our processed ScanNet scene data to [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC).
 
 # Neural 3D Scene Reconstruction with the Manhattan-world Assumption
-### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=oEE7mK0YQtc) | [Paper](https://arxiv.org/abs/2205.02836)
+### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=mavJk_2JywA) | [Paper](https://arxiv.org/abs/2205.02836)
 <br/>
 
 ![introduction](./assets/introduction.png)
