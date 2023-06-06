@@ -6,7 +6,7 @@
 * `05/10/2022` We upload our processed ScanNet scene data to [Google Drive](https://drive.google.com/drive/folders/1LyeLuJzTH7-JWUG886gpN1WEzxGDRLm3?usp=sharing).
 
 # Neural 3D Scene Reconstruction with the Manhattan-world Assumption
-### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=oEE7mK0YQtc) | [Paper](https://arxiv.org/abs/2205.02836)
+### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=U4zmSuh31g0) | [Paper](https://arxiv.org/abs/2205.02836)
 <br/>
 
 ![introduction](./assets/introduction.png)
