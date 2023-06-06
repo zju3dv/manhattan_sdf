@@ -8,7 +8,7 @@ You need to install Detectron2, and we recommend the 0.4 version with PyTorch 1.
 
 ## Run
 
-We provide the trained model, you can download it from [here](https://zjueducn-my.sharepoint.com/:u:/g/personal/guohaoyu_zju_edu_cn/EY8mLcUOek1OgFmxtQ_G6mIBnbSSB7C0m5VztblG_cztXw?e=t3rUb0) and run inference by:
+We provide the trained model, you can download it from [here](https://drive.google.com/file/d/1sbboJHCMmFb1xzFBsf0ynfixJ1YcvT-r/view?usp=sharing) and run inference by:
 ```shell
 python inference.py
 ```
