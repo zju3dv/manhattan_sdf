@@ -33,7 +33,7 @@ for scene_id in ['0050_00']:
 
     os.makedirs(f'{target}/images', exist_ok=True)
     os.makedirs(f'{target}/pose', exist_ok=True)
-    os.makedirs(f'{target}/depth_patchmatch', exist_ok=True)
+    os.makedirs(f'{target}/depth_colmap', exist_ok=True)
 
     id_list = os.listdir(source + 'color')
     id_list = [id[:-4] for id in id_list if id.endswith('0.jpg')]
@@ -153,5 +153,5 @@ for scene_id in ['0050_00']:
             continue
         depth_fname = depth_bin_path
         depth = read_array(depth_fname)
-        depth[mask == 0] = 0
-        np.save(f'{target}/depth_patchmatch/{name[:-4]}.npy', depth)
+        # depth[mask == 0] = 0
+        np.save(f'{target}/depth_colmap/{name[:-4]}.npy', depth)

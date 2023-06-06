@@ -1,6 +1,6 @@
 ## Our results
 
-We provide our reconstructed meshes [here](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/ErmaGSfN0NlNgYSUfkGjNE8BkNvg77xqwJtz-9q1aJaVTw?e=hfI0rA).
+We provide our reconstructed meshes [here](https://drive.google.com/file/d/1Rx8VBxCQDbznEET0OwVPf2dM_nnXktxC/view?usp=sharing).
 
 The following table shows the detailed quantitative results.
 
@@ -11,10 +11,10 @@ The following table shows the detailed quantitative results.
 |0580_00|0.045|0.055|0.719|0.654|0.685|
 |0616_00|0.067|0.068|0.622|0.556|0.587|
 
-We provide our trained models [here](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/ErKnCXKbRa5Okkjivw4663kBJslVgGOSbM4rUxyIwKqZyw?e=TJvwTY).
+We provide our trained models [here](https://drive.google.com/file/d/1n3IjYGB3Np17UnaiQ-d9zIUFjEpaKV3l/view?usp=sharing).
 
 ## Baseline results
 
-We provide reconstructed meshes of our baselines (including COLMAP, COLMAP*, ACMP, NeRF, UNISURF, NeuS, and VolSDF) [here](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EnFnT8GK6HdFhENbjuVdvdoBJPsCfEefvQKp6zxHB3Bavw?e=7iCFi1).
+We provide reconstructed meshes of our baselines (including COLMAP, COLMAP*, ACMP, NeRF, UNISURF, NeuS, and VolSDF) [here](https://drive.google.com/file/d/1yNH8O-ommuugWyGx6xfcCG-qqF139Tqr/view?usp=sharing).
 
 Please refer to our [supplementary material](https://raw.githubusercontent.com/ghy0324/project_page_assets/main/manhattan_sdf/supp.pdf) for detailed quantitative results.

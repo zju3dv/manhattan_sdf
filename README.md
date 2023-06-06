@@ -3,7 +3,7 @@
 * `06/03/2022` We provide the instruction to run on custom data [here](./docs/CUSTOM.md).
 * `05/10/2022` To make the comparison on ScanNet easier, we provide all quantitative and qualitative results of baselines [here](./docs/RESULTS.md#baseline-results), including COLMAP, COLMAP*, ACMP, NeRF, UNISURF, NeuS, and VolSDF.
 * `05/10/2022` To make the following works easier to compare with our model, we provide our quantitative and qualitative results, as well as the trained models on ScanNet [here](./docs/RESULTS.md#our-results).
-* `05/10/2022` We upload our processed ScanNet scene data to [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC).
+* `05/10/2022` We upload our processed ScanNet scene data to [Google Drive](https://drive.google.com/drive/folders/1LyeLuJzTH7-JWUG886gpN1WEzxGDRLm3?usp=sharing).
 
 # Neural 3D Scene Reconstruction with the Manhattan-world Assumption
 ### [Project Page](https://zju3dv.github.io/manhattan_sdf) | [Video](https://www.youtube.com/watch?v=oEE7mK0YQtc) | [Paper](https://arxiv.org/abs/2205.02836)
@@ -26,7 +26,7 @@ conda activate manhattan
 
 ### Data preparation
 
-Download ScanNet scene data evaluated in the paper from [Onedrive](https://zjueducn-my.sharepoint.com/:f:/g/personal/guohaoyu_zju_edu_cn/EqYvwsTjlcZIpA8CDlFYhKgBD57le2O_dHvpXF6zPv6Uyg?e=6FeMrC) / [Google Drive](https://drive.google.com/drive/folders/1VwnlvYe5ab-hz0AK2ugxWz3RiMFNA7Ot?usp=sharing) / [BaiduNetDisk (password:ap9k)](https://pan.baidu.com/s/1P5LWMvPzOLKiwEcMAjaDIw) and extract them into `data/`. Make sure that the path is consistent with [config file](./configs/scannet/0050.yaml#L38).
+Download ScanNet scene data evaluated in the paper from [Google Drive](https://drive.google.com/drive/folders/1LyeLuJzTH7-JWUG886gpN1WEzxGDRLm3?usp=sharing) and extract them into `data/`. Make sure that the path is consistent with [config file](./configs/scannet/0050.yaml#L38).
 
 We provide the instruction to run on custom data [here](./docs/CUSTOM.md).
 
